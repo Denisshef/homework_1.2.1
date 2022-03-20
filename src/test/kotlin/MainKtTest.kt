@@ -83,6 +83,6 @@ class MainKtTest {
         )
 
         // assert
-        assertEquals(0.0, result, 0.02)
+        assertEquals(1.0, result, 0.02)
     }
 }
