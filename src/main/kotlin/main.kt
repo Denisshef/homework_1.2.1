@@ -71,7 +71,7 @@ fun saveAmountTransferMonth(amount: Int = 0): Int {
 fun transfer(card: Card, amountUser: Int, transferPastMonth: Int = 0): Double {
     val amount = amountUser * 100
 
-    val i = when (card) {
+    val cardUser = when (card) {
         Card.MASTERCARD, Card.MAESTRO -> {
             if (transferPastMonth in 30000..7500000) {
                 0.0
@@ -89,5 +89,5 @@ fun transfer(card: Card, amountUser: Int, transferPastMonth: Int = 0): Double {
         else -> 0.0
     }
     saveAmountTransferMonth(amountUser)
-    return i
+    return cardUser
 }
